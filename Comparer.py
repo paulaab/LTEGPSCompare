@@ -10,28 +10,26 @@ lteTime=[]
 gps = json.load(gpsFile)
 lte = json.load(lteFile)
 
-print (gps['71']['time utc'])
-#print (lte)
+
 
 
 for i in range(0, len(gps)):
-
-    gpsTime.append(gps[str(i)]['time utc'])
+    gs = gps[str(i)]['time utc'][:19]
+    t1 = datetime.strptime(gs, "%Y-%m-%dT%H:%M:%S")
+    gpsTime.append(t1)
 
 
 
 for i in range(0,len(lte)):
+    ls = lte[str(i)]['time utc']
+    t2 = datetime.strptime(gs, "%Y-%m-%dT%H:%M:%S")
+    lteTime.append(t2)
 
 
-  lteTime.append(lte[str(i)]['time utc'])
 
 
 
-
-t1 = datetime.strptime(gpsTime[1], "%Y-%m-")
 
 gpsFile.close()
 lteFile.close()
 
-print(gpsTime)
-print(lteTime)
