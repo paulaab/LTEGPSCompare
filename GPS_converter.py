@@ -53,8 +53,10 @@ with open('gpsTrace_runde1.txt', 'r') as gpsFile:
                     data[field] = value
     keylist = myGPS.keys()
     keylist.sort()
-    for key in keylist:
-        print "%s: %s" % (key, myGPS[key])
+
+    print (len(keylist))
+    #for key in keylist:
+     #   print "%s: %s" % (key, myGPS[key])
     #od = collections.OrderedDict(sorted(myGPS.items()))
     #print(myGPS)
     jsonData = json.dumps(myGPS)                                       #Save Python dictionary as JSON File
