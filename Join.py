@@ -21,6 +21,8 @@ with open('DataJoined.json', 'a') as f:
     f.write(jsonData + '\n')
 
 
-print total
+#print total
 gpsNewData.close()
 lteNewData.close()
+
+print ("New JSON file generated!")

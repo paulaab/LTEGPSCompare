@@ -88,13 +88,16 @@ with open('LTETrace_runde1.txt', 'r') as ltefile:
                     data[field] = value
 
 
-    keylist = myLTE.keys()
-    keylist.sort()
-    for key in keylist:
-        print "%s: %s" % (key, myLTE[key])
+    #keylist = myLTE.keys()
+    #keylist.sort()
+    #for key in keylist:
+     #   print "%s: %s" % (key, myLTE[key])
+
+
 
     jsonData = json.dumps(myLTE)                                       #Save Python dictionary as JSON File
     with open('JSONLTEData.json', 'a') as f:
         f.write(jsonData + '\n')
 
 
+    print ("Text file containing LTE Measurements parsed into JSON File.")

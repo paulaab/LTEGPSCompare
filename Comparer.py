@@ -56,7 +56,7 @@ for currentGPStime in gpsTime:
             lowestDelta = currentDelta
             lowestLTEtime = currentLTEtime
     lteLowDelta.append(lowestLTEtime)
-print (len(lteLowDelta))
+#print (len(lteLowDelta))
 #creating new Json File from old file, so that all the data will be there
 newLTEjson = {}
 i=0
@@ -78,3 +78,5 @@ with open('JSONNnewLTEData.json', 'a') as f:
 
 gpsFile.close()
 lteFile.close()
+
+print ("Made comparison of the time stamps...")

@@ -54,7 +54,7 @@ with open('gpsTrace_runde1.txt', 'r') as gpsFile:
     keylist = myGPS.keys()
     keylist.sort()
 
-    print (len(keylist))
+    #print (len(keylist))
     #for key in keylist:
      #   print "%s: %s" % (key, myGPS[key])
     #od = collections.OrderedDict(sorted(myGPS.items()))
@@ -64,6 +64,10 @@ with open('gpsTrace_runde1.txt', 'r') as gpsFile:
         #json.dump(jsonData, f)
         f.write(jsonData + '\n')
 
+
+
+
+print ("Text file containing GPS Measurements parsed into JSON File.")
 #DELETE A CHARACTER FROM A STRING
 #newstr = oldstr.replace("M", "")
 #EXTRACT SUBSTRING INSIDE STRING
